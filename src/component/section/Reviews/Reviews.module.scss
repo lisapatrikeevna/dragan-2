@@ -1,0 +1,19 @@
+%dFlex{ display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;}
+.rewievs{
+    //background: url(../img/map8.png)no-repeat center top/cover;
+    .rewievsTitle{
+        /*margin-left: 21%;*/
+        text-align: center;
+    }
+    .rewievsBlock {
+        padding: 15px;
+        width: 647px;
+        background: #fff;
+        /*margin: 10% 1%;*/
+        box-shadow: 5px 3px 2px 3px rgba(0, 0, 0, 0.06);
+    }
+}

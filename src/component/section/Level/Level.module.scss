@@ -1,0 +1,45 @@
+%dFlex{ display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+}
+.level {
+    //background: url(../img/line.png)no-repeat right;
+    .wrapTitle {
+        img {
+            width: 120px;
+            height: 120px;
+            margin-left: -38px;
+        }
+
+        .levelTitle {
+            margin-left: 20px;
+            padding-top: 56px;
+            margin-bottom: 68px;
+        }
+
+        //@extend dFlex;
+    }
+
+    .levelWrap {
+        .i {
+            font-size: 88px;
+            margin-bottom: 30px;
+        }
+
+        .levelWrapTitle {
+            margin-bottom: 50px;
+        }
+
+        .wrapDeck {
+            width: 177px;
+        }
+    }
+}
+//.level .container{
+//    padding-top: 18%;
+//}

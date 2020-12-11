@@ -1,0 +1,22 @@
+%dFlex{ display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;}
+h4, h5, h6 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+}
+.collective {
+  .wrapTitle {
+    padding-top: 40px;
+  }
+}
+
+.collectiveWrep {
+  .i {
+    font-size: 45px;
+    margin-top: 55px;
+    margin-bottom: 40px;
+  }
+}
