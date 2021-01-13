@@ -9,7 +9,7 @@ let initState: initStateType = {
     status:false
 }
 
-export const appReduser = (state = initState, action: any): initStateType => {
+export const appReducer = (state = initState, action: any): initStateType => {
     switch (action.type) {
         case 'APP/SET-STATUS':
             return {...state, status: action.status}

@@ -409,6 +409,8 @@ button .menu-toggle{
 	}
 }
 
-
+.ui.menu .dropdown.item .menu{
+	background: #5f7392!important;
+}
 
 

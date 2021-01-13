@@ -15,7 +15,7 @@ h2{
   font-weight: 900;
 }
 .individual{
-  background: #97b5d6 url(../img/individual.jpg)no-repeat center top/cover;
+  //background: #97b5d6 url(../img/individual.jpg)no-repeat center top/cover;
   .wrapTitle{
     margin: 40px 0 122px;
 
@@ -65,7 +65,7 @@ h2{
     li{
       line-height: 65px;
       p{
-       @extend p;
+       //@extend p;
       }
     }
   }
@@ -80,13 +80,13 @@ h2{
   li{
     line-height: 65px;
     p{
-      @extend p;
+      //@extend p;
     }
   }
   .benefistWrapText{
     font-size: 20px;
     margin: 50px 0;
-    @extend violet;
+    //@extend violet;
   }
 }
 

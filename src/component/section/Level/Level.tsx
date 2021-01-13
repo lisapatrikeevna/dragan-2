@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../../main.css';
-import time from './../../img/time.jpg';
+import time from './../../../img/time.jpg';
 import {Icon} from "semantic-ui-react";
 import cl from './Level.module.scss';
 

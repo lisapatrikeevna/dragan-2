@@ -8,8 +8,13 @@ import {Provider} from 'react-redux';
 import {BrowserRouter} from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css';
 import './component/bootstrap-grid.min.css';
+import * as firebase from 'firebase';
+import {firebaseConfig} from './1bll/Api'
 
 
+//@ts-ignore
+//firebase.initializeApp(firebaseConfig);
+firebase.default.initializeApp(firebaseConfig)
 ReactDOM.render(
     <Provider store={store}>
         <React.StrictMode>

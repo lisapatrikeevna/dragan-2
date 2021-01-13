@@ -5,7 +5,7 @@ import {Icon} from "semantic-ui-react";
 
 export const Footer= (props:any)=>{
    return(
-       <div className="footer">
+       <div className="footer" id='footer'>
         <div className="container">
             <div className="row">
                 <div className="col-lg-5 col-md-12">
