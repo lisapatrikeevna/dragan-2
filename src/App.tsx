@@ -29,7 +29,7 @@ function App() {
             {/*<Route path={"/login"} render={() => <Registration/>}/>*/}
             {/*<Route path={"/registration"} render={() => <Registration/>}/>*/}
             {/*{!userStatus && <MainPage/>}*/}
-            <Route path={'/'} exact render={() => <Redirect to={'/MainPage'}/>}/>
+            <Route path={'/'} exact render={() => <Redirect to='/MainPage'/>}/>
             <Route path={'/mainPage'} exact render={() => <MainPage/>}/>
             <Route path={'/userPage'} exact render={() => <UserPage/>}/>
             <Route path={'/individualPage'} exact render={() => <IndividualPage/>}/>
