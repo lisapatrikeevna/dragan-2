@@ -1,72 +1,83 @@
 // import React from "react";
-import React, {useState} from 'react'
-import {Dropdown, Icon, Menu, Segment} from 'semantic-ui-react'
-import {NavLink, Redirect} from "react-router-dom";
+import React, {useEffect, useState} from 'react'
+import {Dropdown, Icon, Menu} from 'semantic-ui-react'
+import {NavLink} from "react-router-dom";
 import logo from './../../img/logo.png'
 import {ExampleModal} from "../../common/modalForm/exampleModal";
 import {Login} from "../login/login";
 import {Link} from 'react-scroll/modules';
-import cl from './header.module.css';
+import './header.css';
 import {Registration} from "../Registration/registration";
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "../../1bll/store";
+import {isAuthTC} from "../../1bll/loginReduser";
 
 // TODO: Update <Search> usage after its will be implemented
 type propsType = {
     userStatus: boolean
 }
 const MenuExampleAttached = (props: propsType) => {
-
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(isAuthTC())
+    }, [dispatch])
+    let userStatus = useSelector<AppRootStateType, boolean>(state => state.login.status)
+    let initialized = useSelector<AppRootStateType, boolean>(state => state.login.isInitialized)
+    // alert(userStatus)
     let [popupId, setPopupId] = useState('')
-    let [collaps, setcollaps] = useState(false)
+    let [collapse, setCollapse] = useState(false)
     const regOnClick = () => {
-        setcollaps(!collaps)
+        setCollapse(!collapse)
         setPopupId("4")
     }
     const logOnClick = () => {
-        setcollaps(!collaps)
+        setCollapse(!collapse)
         setPopupId("3")
     }
-    const onCansel = () => {
-        setcollaps(!collaps)
+    const cancel = () => {
+        setCollapse(!collapse)
     }
     return <div className="header">
         <Menu attached='top'>
-            <NavLink to={'/home'}><img src={logo} alt="logo" className="logo" style={{width: '90px'}}/></NavLink>
+            <NavLink to={'/mainPage'}><img src={logo} alt="logo"
+                                           className="logo"/></NavLink> {/*style={{width: '90px'}}*/}
             <Dropdown item icon='bars' simple>
                 <Dropdown.Menu>
+                    {userStatus &&
                     <Dropdown.Item>
                         <Icon name='dropdown'/>
                         <span className='text'>if login true</span>
                         <Dropdown.Menu>
-                            <Dropdown.Item>Document</Dropdown.Item>
-                            <Dropdown.Item>Image</Dropdown.Item>
+                            <Dropdown.Item><NavLink to={'/individualPage'}>IndividualPage</NavLink></Dropdown.Item>
+                            <Dropdown.Item><NavLink to={'/userPage'}>UserPage</NavLink></Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown.Item>
+                    }
+
                     <Dropdown.Item>test level</Dropdown.Item>
                     <Dropdown.Item><Link to='footer'>contacts</Link></Dropdown.Item>
-                    <Dropdown.Item><Link to='individual'>individual</Link></Dropdown.Item>
-                    <Dropdown.Item><Link to='collective'>collective</Link></Dropdown.Item>
-                    {/*<Dropdown.Item><NavLink to='registration'>registration</NavLink></Dropdown.Item>*/}
-                    {/*<Dropdown.Item>Edit Permissions</Dropdown.Item>*/}
+                    <Dropdown.Item><NavLink to='/mainPage'>home</NavLink></Dropdown.Item>
+                    {/*<Dropdown.Item><Link to='collective'>collective</Link></Dropdown.Item>*/}
                     <Dropdown.Divider/>
                     {/*<Dropdown.Header>Export</Dropdown.Header>*/}
                     <Dropdown.Item><NavLink to={'tel:0800330066'}>0 800 33 00 66</NavLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-            <Menu.Menu position='right'>
-                <div className='ui right aligned category search item'>
-                    <div className='ui transparent icon input'>
-                        <input
-                            className='prompt'
-                            type='text'
-                            placeholder='Search animals...'
-                        />
-                        <i className='search link icon'/>
-                    </div>
-                    <div className='results'/>
-                </div>
-            </Menu.Menu>
-            {props.userStatus
-                ? <button onClick={regOnClick}>
+            {/*<Menu.Menu position='right'>*/}
+            {/*    <div className='ui right aligned category search item'>*/}
+            {/*        <div className='ui transparent icon input'>*/}
+            {/*            <input*/}
+            {/*                className='prompt'*/}
+            {/*                type='text'*/}
+            {/*                placeholder='Search animals...'*/}
+            {/*            />*/}
+            {/*            <i className='search link icon'/>*/}
+            {/*        </div>*/}
+            {/*        <div className='results'/>*/}
+            {/*    </div>*/}
+            {/*</Menu.Menu>*/}
+            {!props.userStatus
+                ? <button onClick={regOnClick} className='default' >
                     <span>registration</span>
                     <Icon name='arrow alternate circle up outline' id='4' onClick={regOnClick}/>
                 </button>
@@ -75,8 +86,9 @@ const MenuExampleAttached = (props: propsType) => {
                     <Icon name='arrow alternate circle up outline' id='3' onClick={logOnClick}/>
                 </button>
             }
-            <ExampleModal collaps={collaps && popupId === '4'} onCansel={onCansel} children={<Registration/>}/>
-            <ExampleModal collaps={collaps && popupId === '3'} onCansel={onCansel} children={<Login/>}/>
+            <ExampleModal collapse={collapse && popupId === '4'} closed={cancel}
+                          children={<Registration onCansel={cancel}/>}/>
+            <ExampleModal collapse={collapse && popupId === '3'} closed={cancel} children={<Login/>}/>
         </Menu>
 
         {/*<Segment attached='bottom'>*/}

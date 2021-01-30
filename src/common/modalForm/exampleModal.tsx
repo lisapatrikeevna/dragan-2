@@ -6,26 +6,26 @@ import Icon from "semantic-ui-react/dist/commonjs/elements/Icon";
 type propsType = {
     modalHeader?: string
     modalFooter?: string
-    collaps: boolean
+    collapse: boolean
     // onSubmitHandler: () => void
-    onCansel: () => void
+    closed: () => void
     children: any
 }
 const defaultProps: propsType = {
     modalHeader: 'some Title',
     modalFooter: '',
-    collaps: false ,
+    collapse: false ,
     // onSubmitHandler: () => {
     // },
-    onCansel: () => {    },
+    closed: () => {    },
     children: null,
 }
 export const ExampleModal = (props = defaultProps) => {
 const onChange=()=>{
-    props.onCansel()
+    props.closed()
 }
     return (
-        <>{props.collaps &&
+        <>{props.collapse &&
         <Portal>
             <div className={cl.ModalOverlay} >
                 <div className={cl.ModalContent}>

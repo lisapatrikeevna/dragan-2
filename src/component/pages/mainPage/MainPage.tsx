@@ -1,10 +1,10 @@
 import React from 'react';
-import {Offer} from "../section/Offer/Offer";
-import {Level} from "../section/Level/Level";
-import {Individual} from "../section/Individual/Individual";
-import {Collective} from "../section/Collective/Collective";
-import {Form} from "../../common/Form";
-import {Reviews} from "../section/Reviews/Reviews";
+import {Offer} from "../../section/Offer/Offer";
+import {Level} from "../../section/Level/Level";
+import {Individual} from "../../section/Individual/Individual";
+import {Collective} from "../../section/Collective/Collective";
+import {Form} from "../../../common/Form";
+import {Reviews} from "../../section/Reviews/Reviews";
 
 const MainPage = () => {
     return (
@@ -13,10 +13,6 @@ const MainPage = () => {
             <Level/>
             <Individual/>
             <Collective/>
-            {/*<div className="wrap">*/}
-            {/*    <Route path={"/individual"} render={() => <Individual/>}/>*/}
-            {/*    <Route path={"/collective"} render={() => <Collective/>}/>*/}
-            {/*</div>*/}
             <section className="sign">
                 <div className="container">
                     <div className="row">
@@ -30,7 +26,7 @@ const MainPage = () => {
                     </div>
                 </div>
             </section>
-            <Reviews/>
+            {/*<Reviews/>*/}
         </div>
     );
 };

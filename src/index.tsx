@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -15,6 +15,7 @@ import {firebaseConfig} from './1bll/Api'
 //@ts-ignore
 //firebase.initializeApp(firebaseConfig);
 firebase.default.initializeApp(firebaseConfig)
+
 ReactDOM.render(
     <Provider store={store}>
         <React.StrictMode>

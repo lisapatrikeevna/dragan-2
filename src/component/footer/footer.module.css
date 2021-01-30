@@ -1,0 +1,75 @@
+.footer{
+    background: #2a456e;
+    color: #f3f3f3;
+    padding: 40px 0 30px;
+}
+.flWrap{
+    width: 300px;
+}
+.footerAsk{
+    margin: 15px auto;
+}
+.footerLogo{
+    width: 200px;
+}
+.footerSocial{
+    margin-top: 40px;
+}
+.footerSocial a,.phone a,.mail a,.scheduleWrapItem{
+    color: #fff;
+    font-weight: 600;
+}
+.schedule{
+    display: flex;
+}
+.footerSocial a i{
+    font-size: 30px;
+    padding-right: 10px;
+}
+.footerSocial a p{
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-top: 10px;
+}
+.footerDesk h5{
+    padding-bottom: 30px;
+}
+.footerDesk, .footerContacts{
+    margin-top: 106px;
+}
+.footerContacts{
+    width: 200px;
+}
+.footerDesk ul{
+    list-style: none;
+}
+.mail a{
+    padding-top: 11px;
+    padding-left: 25px;
+}
+.footerContacts img{
+    width: 40px;
+    height: 43px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.phone{
+    margin-top: 20px;
+}
+.phoneWrap{
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    margin-left: 35px;
+}
+.mail i, .phone i{
+    font-size: 35px;
+}
+.footerLet{
+
+}
+.dFlex{
+    display: flex;
+}

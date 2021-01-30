@@ -1,24 +1,20 @@
-%dFlex{ display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;}
 %p{
   line-height: 17px;
 }
 %violet{
   color: #861391;
 }
-h2{
-  font-size: 42px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 900;
-}
-.individual{
-  //background: #97b5d6 url(../img/individual.jpg)no-repeat center top/cover;
-  .wrapTitle{
-    margin: 40px 0 122px;
 
+.individual{
+  background: #97b5d6 url(./../../../img/individual.jpg)no-repeat center top/cover;
+  h2{
+    font-size: 42px;
+  }
+  ul{
+    list-style: none;
+  }
+  .wrapTitle{
+    margin: 40px 0 70px;
     .violet:after{
       content: '';
       display: block;
@@ -28,35 +24,43 @@ h2{
       margin-top: -56px;
       margin-left: 83%;
     }
-    //@extend dFlex;
   }
-  .level-titleNth{
-    margin: 75px auto;
+  .levelTitleNth{
+    margin: 75px 0;
     padding-top: 0;
   }
-}
-.levelWrep{
-  .levelWrapTitle {
-    margin-bottom: 50px;
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
   }
-  .wrepDeck{
+}
+.levelWrap{
+  width: max-content;
+  margin-bottom: 30px;
+  .levelWrapTitle {
+    margin-bottom: 20px;
+  }
+  .wrapDeck{
     width: 177px;
   }
 }
 
-.level-title.nth{
+.levelTitle.nth{
   margin-left: 20px;
   padding-top: 56px;
   margin-bottom: 68px;
 }
-.individual .level-title{
+.individual .levelTitle{
   margin-left: 0;
 }
-.individual .level-title.nth{
+.individual .levelTitle.nth{
   margin: 75px auto;
   padding-top: 0;
 }
 .classesWrap{
+  width: 50%;
   .classesWrapTitle{
     margin: 35px 0;
   }
@@ -70,7 +74,8 @@ h2{
     }
   }
 }
-.benefistWrap{
+.advantagesWrap{
+  width: 43%;
   background: #c2c1c7a6;
   padding: 30px 40px;
   margin-left: 50px;
@@ -90,15 +95,3 @@ h2{
   }
 }
 
-//.individual .wrap-title{
-//  margin: 40px 0 122px;
-//}
-//.individual .wrap-title .violet:after{
-//  content: '';
-//  display: block;
-//  width: 179px;
-//  height: 2px;
-//  background: #292929;
-//  margin-top: -56px;
-//  margin-left: 83%;
-//}

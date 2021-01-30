@@ -2,93 +2,73 @@ import React from 'react';
 // import '../../main.css';
 import cl from './Collective.module.scss';
 import {Icon} from "semantic-ui-react";
-type CollectiveProps={
 
-}
+type CollectiveProps = {}
 export const Collective = () => {
-
-    return(
-        <section className="collective" id="collective">
+    type itemType = {
+        icon: any
+        h4: string
+        deck: string
+    }
+    const items: Array<itemType> = [
+        {
+            icon: 'graduation cap',
+            h4: 'Teacher',
+            deck: '1 to 5 individual lessons'
+        },
+        {
+            icon: 'stopwatch ',
+            h4: 'Installment plan',
+            deck: ' after each lesson 5 lessons package 10 lessons package'
+        },
+        {
+            icon: 'calendar alternate',
+            h4: 'Schedule',
+            deck: 'convenient for you - choose for yourself'
+        },
+        {
+            icon: 'calculator',
+            h4: 'Cost',
+            deck: 'from 70$'
+        },
+        {
+            icon: 'laptop',
+            h4: 'Training organization',
+            deck: 'google class PDF, audio, video, interactive flash cards, tests, games...'
+        },
+        {
+            icon: 'mobile alternate',
+            h4: 'Application',
+            deck: 'google class mobile app'
+        },
+        {
+            icon: 'headphones',
+            h4: 'Free DEMO',
+            deck: '30 minute live Skype lesson with explanation of the new material'
+        },
+        {
+            icon: 'credit card outline',
+            h4: 'Certificate',
+            deck: 'recommendations on LinkedIn and Facebook'
+        },
+    ]
+    const item = items.map((i, ind) =>
+        <div className={cl.collectiveWrap}>
+            <Icon name={i.icon} className={cl.i}/>
+            <h4>{i.h4}</h4>
+            <p>{i.deck}</p>
+        </div>
+    )
+    return (
+        <section className={cl.collective} id="collective">
             <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <h2 className="wrap-title">
-                            How are collective classes at <span className="violet"> Silky's</span>
-                        </h2>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 col-12">
-                        <div className={cl.collectiveWrep}>
-                            {/*<i className="fas fa-user-graduate"></i>*/}
-                            <Icon name='graduation cap' className={cl.i}/>
-                            <h4>Teacher</h4>
-                            <p>1 to 5 individual lessons</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 col-12">
-                        <div className={cl.collectiveWrep}>
-                            {/*<i className="fas fa-stopwatch"></i>*/}
-                            {/*<Icon name='hourglass outline'/>*/}
-                            <Icon name='stopwatch' className={cl.i}/>
-                            <h4>Installment plan</h4>
-                            <p>
-                                after each lesson 5 lessons package 10 lessons package
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 col-12">
-                        <div className={cl.collectiveWrep}>
-                            {/*<i className="fas fa-calendar-alt"></i>*/}
-                            <Icon name='calendar alternate' className={cl.i}/>
-                            {/*<Icon name='calendar alternate outline'/>*/}
-                            <h4>Schedule</h4>
-                            <p>convenient for you - choose for yourself</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 col-12">
-                        <div className={cl.collectiveWrep}>
-                            {/*<i className="fas fa-calculator"></i>*/}
-                            <Icon name='calculator' className={cl.i}/>
-                            <h4>Cost</h4>
-                            <p>from 70$</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 col-12">
-                        <div className={cl.collectiveWrep}>
-                            {/*<i className="fas fa-desktop"></i>*/}
-                            {/*<Icon name='tv'/>*/}
-                            <Icon name='laptop' className={cl.i}/>
-                            <h4>Training organization</h4>
-                            <p>google class PDF, audio, video, interactive flash cards, tests, games...</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 col-12">
-                        <div className={cl.collectiveWrep}>
-                            {/*<i className="fas fa-mobile-alt"></i>*/}
-                            {/*<Icon name='tablet alternate'/>*/}
-                            <Icon name='mobile alternate' className={cl.i}/>
-                            <h4>Application</h4>
-                            <p>google class mobile app</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 col-12">
-                        <div className={cl.collectiveWrep}>
-                            {/*<i className="fas fa-headset"></i>*/}
-                            <Icon name='headphones' className={cl.i}/>
-                            {/*<Icon name='file audio outline'/>*/}
-                            <h4>Free DEMO</h4>
-                            <p>30 minute live Skype lesson with explanation of the new material</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 col-12">
-                        <div className={cl.collectiveWrep}>
-                            {/*<i className="fas fa-id-card"></i>*/}
-                            {/*<Icon name='credit card'/>*/}
-                            <Icon name='credit card outline' className={cl.i}/>
-                            <h4>Certificate</h4>
-                            <p>recommendations on LinkedIn and Facebook</p>
-                        </div>
-                    </div>
+                <h2 className={cl.wrapTitle}>
+                    How are collective classes at <span className="violet"> Silky's</span>
+                </h2>
+                <div className={cl.row}>
+                    {item}
                 </div>
             </div>
         </section>
-)}
+    )
+}

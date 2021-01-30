@@ -1,0 +1,31 @@
+.ui.menu,.ui.attached.menu:not(.tabular){
+    background: transparent;
+    border: none!important;
+    display: flex;
+    align-items: center;
+}
+.header{
+    color: #fff;
+    background: #2a456e;
+    padding: 10px 0;
+    margin: 0 auto;
+    width: 100%;
+}
+.default{
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    height: 30px;
+}
+.header p,.header a,.header i,.header span{
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+.header a:hover{
+    color: #fff;
+    border-bottom-color: #fff;
+}
+.logo{
+    height: 61px;
+    width: 150px;
+}

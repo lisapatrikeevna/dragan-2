@@ -1,46 +1,3 @@
-.ui.menu,.ui.attached.menu:not(.tabular){
-	background: transparent;
-	border: none;
-}
-.header{
-	color: #fff;
-	position: absolute;
-	padding: 10px 0;
-	margin: 0 auto;
-	width: 100%;
-}
-button .menu-toggle{
-	display: none;
-}
-.header nav ul{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: space-between;
-	list-style: none;
-	width: 100%;
-	height: 70px;
-    align-items: center;
-}
-.header nav li a,.header span{
-	/*color: #fff;*/
-	text-decoration: none;
-	padding-left: 6px;
-}
-.header p,.header a,.header i,.header span{
-	color: #fff;
-}
-.logo{
-	height: 61px;
-	width: 150px;
-}
-.collapse.navbar-collapse{
-	/*width: 395px;
-	float: right;*/
-	margin-left: 430px;
-}
 .flagwrep{
 
 }
@@ -204,74 +161,7 @@ button .menu-toggle{
 	padding: 45px 0;
 }
 
-.footer{
-	background: #2a456e;
-	color: #000;
-}
-.fl-wrepp{
-	width: 300px;
-}
-.footer-ask{
-	margin: 15px auto;
-}
-.footer-logo{
-	width: 200px;
-}
-.footer .container{
-	padding-top: 40px;
-}
-.footer-sotial{
-	margin-top: 40px;
-}
-.footer-sotial a,.phone a,.mail a,.schedule-wrap__item{
-	color: #000;
-	font-weight: 600;
-}
-.footer-sotial a i{
-	font-size: 30px;
-	padding-right: 10px;
-}
-.footer-sotial a p{
-	margin-bottom: 0;
-	margin-left: auto;
-	margin-top: 10px;
-}
-.footer-desk h5{
-	padding-bottom: 30px;
-}
-.footer-desk, .footer-contacts{
-	margin-top: 106px;
-}
-.footer-contacts{
-	width: 200px;
-}
-.footer-desk ul{
-	list-style: none;
-}
-.mail a{
-	padding-top: 11px;
-    padding-left: 25px;
-}
-.footer-contacts img{
-	width: 40px;
-	height: 43px;
-	margin-top: 30px;
-    margin-right: 20px;
-}
-.phone{
-	margin-top: 20px;
-}
-.phone__wrap{
-	-webkit-flex-direction: column;
-	-moz-flex-direction: column;
-	-ms-flex-direction: column;
-	-o-flex-direction: column;
-	flex-direction: column;
-	margin-left: 35px;
-}
-.mail i, .phone i{
-	font-size: 35px;
-}
+
 .navbar-collapse.collapse.show{
 	position: relative;
 }
@@ -288,9 +178,7 @@ button .menu-toggle{
 	color: #fff;
 	border: transparent;
 }
-.offer__btn_wrep_btn p{
-	margin-bottom: 0;
-}
+
 
 /* -	----- Media Queries ------ */
 /*.col-xl-*/
@@ -298,16 +186,6 @@ button .menu-toggle{
 @media screen and (max-width: 1199.98px) {
 	.collapse.navbar-collapse {
 	    margin-left: auto;
-	}
-	.offer__foto{
-		width: 175px;
-	}
-	.f2 {
-    top: 19%;
-    left: 32%;
-	}
-	.box-gray{
-	    margin-top: -29%;
 	}
 }
 @media screen and (max-width: 1199.98px) {
@@ -324,12 +202,6 @@ button .menu-toggle{
 }
 /* 768-992px .col-md-*/
 @media screen and (max-width: 991.98px) {
-	.offer__btn_wrep{
-		width: 100%;
-	}
-	.offer__foto{
-		display: none;
-	}
 	.individual .wrap-title .violet:after{
 		margin-top: -10px;
     	margin-left: 41%;
@@ -360,13 +232,6 @@ button .menu-toggle{
 }
 /* 320-576px .col-*/
 @media screen and (max-width: 575.98px) {
-	.offer__btn_wrep{
-		-webkit-flex-direction: column;
-		-moz-flex-direction: column;
-		-ms-flex-direction: column;
-		-o-flex-direction: column;
-		flex-direction: column;
-	}
 	.level{
 		background: transparent;
 	}
@@ -377,24 +242,11 @@ button .menu-toggle{
 		width: 295px;
     	margin: 10% auto;
 	}
-	.box-gray{
-		left: 0;
-		right: 0;
-		margin-top: -44%;
-	}
-	.box-gray .offer__btn_wrep_btn,.form input,.send-form,.fl-wrepp{
+	.form input,.send-form,.fl-wrepp{
 		width: 100%;
-	}
-	.offer_header{
-		font-size: 47px;
 	}
 	h2 {
 	    font-size: 33px;
-	}
-	.offer__btn_wrep_btn{
-		width: 100%;
-		text-align: center;
-	    line-height: 14px;
 	}
 }
 @media screen and (max-width: 399.98px) {

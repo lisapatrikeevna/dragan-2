@@ -3,36 +3,36 @@
     display: -ms-flex;
     display: -o-flex;
     display: flex;}
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 900;
-}
+
 .level {
-    //background: url(../img/line.png)no-repeat right;
+    background: url(./../../../img/line.png)no-repeat right;
+    padding: 18% 0 5%;
     .wrapTitle {
+        display: flex;
         img {
             width: 120px;
             height: 120px;
             margin-left: -38px;
         }
-
         .levelTitle {
             margin-left: 20px;
             padding-top: 56px;
             margin-bottom: 68px;
         }
-
         //@extend dFlex;
     }
 
     .levelWrap {
+        margin: 3% auto;
+        width: max-content;
         .i {
             font-size: 88px;
-            margin-bottom: 30px;
+            //margin-bottom: 30px;
+            height: auto;
         }
 
         .levelWrapTitle {
-            margin-bottom: 50px;
+            margin: 10px 0 20px;
         }
 
         .wrapDeck {
