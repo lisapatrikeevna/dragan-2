@@ -1,0 +1,11 @@
+https://react.semantic-ui.com/elements/button/#usage-attached-events   -библиотека с иконками
+https://formatjs.io/docs/getting-started/application-workflow   -перевод,мультиязычность
+https://habr.com/ru/post/307652/ -перевод,мультиязычность
+https://www.youtube.com/watch?v=7xf0Kz6WGu8&ab_channel=ITVDN   -50min create bd
+//npm i firebase  //npm install --global firebase-tools
+//firebase login
+// ​firebase init(1p)
+// >(*) Database: Configure Firebase Realtime Database and deploy rules
+// Use an existing project
+//54,17(​firebase init);1,20;1,40 working with bd
+
