@@ -54,7 +54,7 @@ const MenuExampleAttached = (props: propsType) => {
                     </Dropdown.Item>
                     }
 
-                    <Dropdown.Item>test level</Dropdown.Item>
+                    <Dropdown.Item><NavLink  to='/testLevel'>test level</NavLink></Dropdown.Item>
                     <Dropdown.Item><Link to='footer'>contacts</Link></Dropdown.Item>
                     <Dropdown.Item><NavLink to='/mainPage'>home</NavLink></Dropdown.Item>
                     {/*<Dropdown.Item><Link to='collective'>collective</Link></Dropdown.Item>*/}

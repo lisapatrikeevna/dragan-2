@@ -8,6 +8,7 @@ import {AppRootStateType} from "./1bll/store";
 import {Redirect, Route } from 'react-router-dom';
 import UserPage from "./component/pages/userPage/userPage";
 import IndividualPage from "./component/pages/individualPage/individualPage";
+import TestLevel from "./component/pages/testLevel/testLevel";
 
 function App() {
     useEffect(
@@ -25,13 +26,13 @@ function App() {
     return (
         <div className="App">
             <MenuExampleAttached userStatus={userStatus}/>
-
             {/*<Route path={"/login"} render={() => <Registration/>}/>*/}
             {/*<Route path={"/registration"} render={() => <Registration/>}/>*/}
             {/*{!userStatus && <MainPage/>}*/}
             <Route path={'/'} exact render={() => <Redirect to='/MainPage'/>}/>
             <Route path={'/mainPage'} exact render={() => <MainPage/>}/>
             <Route path={'/userPage'} exact render={() => <UserPage/>}/>
+            <Route path={'/testLevel'} exact render={() => <TestLevel/>}/>
             <Route path={'/individualPage'} exact render={() => <IndividualPage/>}/>
             <Footer/>
         </div>
