@@ -9,12 +9,12 @@
 "id": 49,
 "ask": "stop",
 "translate": "останавливаться",
-"stopped": "closed"
+"answer": "stopped"
 }, {
 "id": 48,
 "ask": "live",
 "translate": "жить",
-"stopped": "lived"
+"answer": "lived"
 }, {
 "id": 47,
 "ask": "cry",
@@ -24,7 +24,7 @@
 "id": 46,
 "ask": "keep",
 "translate": "держать, хранить",
-"stopped": "kept"
+"answer": "kept"
 }, {
 "id": 45,
 "ask": "start",
@@ -34,7 +34,7 @@
 "id": 44,
 "ask": "use",
 "translate": "использовать",
-"stopped": "used"
+"answer": "used"
 }, {
 "id": 36,
 "ask": "need",
@@ -44,12 +44,12 @@
 "id": 37,
 "ask": "try",
 "translate": "пробовать",
-"stopped": "tryed"
+"answer": "tryed"
 }, {
 "id": 38,
 "ask": "walk",
 "translate": "гулять",
-"stopped": "walked"
+"answer": "walked"
 }, {
 "id": 39,
 "ask": "remember",
@@ -59,7 +59,7 @@
 "id": 40,
 "ask": "leave",
 "translate": "покидать, уезжать",
-"stopped": "left"
+"answer": "left"
 }, {
 "id": 41,
 "ask": "happen",
@@ -69,7 +69,7 @@
 "id": 42,
 "ask": "talk",
 "translate": "говорить",
-"stopped": "talked"
+"answer": "talked"
 }, {
 "id": 43,
 "ask": "stand",
@@ -79,12 +79,12 @@
 "id": 35,
 "ask": "hear",
 "translate": "слышать",
-"stopped": "heard"
+"answer": "heard"
 }, {
 "id": 34,
 "ask": "begin",
 "translate": "начинать",
-"stopped": "began"
+"answer": "began"
 }, {
 "id": 33,
 "ask": "find",
@@ -94,7 +94,7 @@
 "id": 32,
 "ask": "love",
 "translate": "любить",
-"stopped": "loved"
+"answer": "loved"
 }, {
 "id": 31,
 "ask": "give",
@@ -105,7 +105,7 @@
 "id": 30,
 "ask": "feel",
 "translate": "чувствовать",
-"stopped": "felt"
+"answer": "felt"
 }, {
 "id":  29,
 "ask": "open",
@@ -115,12 +115,12 @@
 "id": 28,
 "ask": "put",
 "translate": "положить",
-"stopped": "put"
+"answer": "put"
 }, {
 "id": 27,
 "ask": "work",
 "translate": "работать",
-"stopped": "worked"
+"answer": "worked"
 }, {
 "id": 26,
 "ask": "must",
@@ -130,7 +130,7 @@
 "id": 25,
 "ask": "may",
 "translate": "мочь",
-"stopped": "might"
+"answer": "might"
 }, {
 "id": 24,
 "ask": "like",
@@ -140,12 +140,12 @@
 "id": 23,
 "ask": "tell",
 "translate": "рассказывать",
-"stopped": "told"
+"answer": "told"
 }, {
 "id": 22,
 "ask": "take",
 "translate": "брать, взять",
-"stopped": "took"
+"answer": "took"
 }, {
 "id": 21,
 "ask": "let",
@@ -155,7 +155,7 @@
 "id": 20,
 "ask": "shall",
 "translate": "вспомогательный глагол",
-"stopped": "should"
+"answer": "should"
 }, {
 "id": 19,
 "ask": "ask",
@@ -165,7 +165,7 @@
 "id": 18,
 "ask": "call",
 "translate": "звонить, звать",
-"stopped": "called"
+"answer": "called"
 }, {
 "id": 17,
 "ask": "seem",
@@ -175,12 +175,12 @@
 "id": 16,
 "ask": "turn",
 "translate": "поворачиваться, вращаться",
-"stopped": "turned"
+"answer": "turned"
 }, {
 "id":  15,
 "ask": "want",
 "translate": "хотеть",
-"stopped": "wanted"
+"answer": "wanted"
 }, {
 "id": 14,
 "ask": "make",
@@ -190,7 +190,7 @@
 "id": 13,
 "ask": "think",
 "translate": "думать",
-"stopped": "thought"
+"answer": "thought"
 }, {
 "id": 12,
 "ask": "will",
@@ -200,7 +200,7 @@
 "id": 11,
 "ask": "see",
 "translate": "видеть",
-"stopped": "saw"
+"answer": "saw"
 }, {
 "id": 10 ,
 "ask": "come",
@@ -210,12 +210,12 @@
 "id": 9,
 "ask": "get",
 "translate": "получать",
-"stopped": "got"
+"answer": "got"
 }, {
 "id": 8,
 "ask": "know",
 "translate": "знать",
-"stopped": "knew"
+"answer": "knew"
 }, {
 "id": 7,
 "ask": "look",
@@ -225,7 +225,7 @@
 "id": 6,
 "ask": "can",
 "translate": "мочь, уметь",
-"stopped": "could"
+"answer": "could"
 }, {
 "id": 5,
 "ask": "go",
@@ -236,7 +236,7 @@
 "id":  4,
 "ask": "say",
 "translate": "говорить",
-"stopped": "said"
+"answer": "said"
 }, {
 "id":  3,
 "ask": "do",
@@ -246,12 +246,218 @@
 "id": 2,
 "ask": "have",
 "translate": "иметь",
-"stopped": "had"
+"answer": "had"
 }, {
 "id": 1,
 "ask": "be (am, is, are)",
 "translate": "быть",
-"stopped": "twas, were"
+"answer": "twas, were"
 }
-]
+],
+  "noun": [
+    {
+      "id": 50,
+      "ask": "block",
+      "answer": "блок"
+    }, {
+      "id": 49,
+      "ask": "car",
+      "answer": "автомобиль"
+    }, {
+      "id": 48,
+      "ask": "street",
+      "answer": "улица"
+    }, {
+      "id": 47,
+      "ask": "hand",
+      "answer": "рука"
+    }, {
+      "id": 46,
+      "ask": "foot",
+      "answer": "ступня"
+    }, {
+      "id": 45,
+      "ask": "apple",
+      "answer": "яблоко"
+    }, {
+      "id": 44,
+      "ask": "eye",
+      "answer": "глаз"
+    }, {
+      "id": 36,
+      "ask": "head",
+      "answer": "голова"
+    }, {
+      "id": 37,
+      "ask": "arm",
+      "answer": "рука "
+    }, {
+      "id": 38,
+      "ask": "hair",
+      "answer": "волосы"
+    }, {
+      "id": 39,
+      "ask": "face",
+      "answer": "лицо"
+    }, {
+      "id": 40,
+      "ask": "people",
+      "answer": "люди"
+    }, {
+      "id": 41,
+      "ask": "love",
+      "answer": "любовь"
+    }, {
+      "id": 42,
+      "ask": "anger",
+      "answer": "злость"
+    }, {
+      "id": 43,
+      "ask": "ceiling",
+      "answer": "потолок"
+    }, {
+      "id": 35,
+      "ask": "wall",
+      "answer": "стена"
+    }, {
+      "id": 34,
+      "ask": "window",
+      "answer": "окно"
+    }, {
+      "id": 33,
+      "ask": "heart",
+      "answer": "сердце"
+    }, {
+      "id": 32,
+      "ask": "branch",
+      "answer": "ветвь"
+    }, {
+      "id": 31,
+      "ask": "break",
+      "answer": "перерыв"
+    },
+    {
+      "id": 30,
+      "ask": "kitten",
+      "answer": "котёнок"
+    }, {
+      "id":  29,
+      "ask": "account",
+      "answer": "счет"
+    }, {
+      "id": 28,
+      "ask": "bit",
+      "answer": "кусочек"
+    }, {
+      "id": 27,
+      "ask": "change",
+      "answer": "изменение"
+    }, {
+      "id": 26,
+      "ask": "event",
+      "answer": "событие"
+    }, {
+      "id": 25,
+      "ask": "expansion",
+      "answer": "расширение"
+    }, {
+      "id": 24,
+      "ask": "feeling",
+      "answer": "чувство"
+    }, {
+      "id": 23,
+      "ask": "hate",
+      "answer": "ненависть"
+    }, {
+      "id": 22,
+      "ask": "light",
+      "answer": "свет"
+    }, {
+      "id": 21,
+      "ask": "move",
+      "answer": "переезд"
+    }, {
+      "id": 20,
+      "ask": "price",
+      "answer": "цена"
+    }, {
+      "id": 19,
+      "ask": "print",
+      "answer": "печатать"
+    }, {
+      "id": 18,
+      "ask": "rate",
+      "answer": "тариф"
+    }, {
+      "id": 17,
+      "ask": "respect",
+      "answer": "уважение"
+    }, {
+      "id": 16,
+      "ask": "science",
+      "answer": "наука"
+    }, {
+      "id":  15,
+      "ask": "side",
+      "answer": "сторона"
+    }, {
+      "id": 14,
+      "ask": "sound",
+      "answer": "звук"
+    }, {
+      "id": 13,
+      "ask": "summer",
+      "answer": "лето"
+    }, {
+      "id": 12,
+      "ask": "talk",
+      "answer": "разговор"
+    }, {
+      "id": 11,
+      "ask": "touch",
+      "answer": "прикосновение"
+    }, {
+      "id": 10 ,
+      "ask": "cake",
+      "answer": "торт"
+    }, {
+      "id": 9,
+      "ask": "fly",
+      "answer": "муха"
+    }, {
+      "id": 8,
+      "ask": "knot ",
+      "answer": "узел"
+    }, {
+      "id": 7,
+      "ask": "library",
+      "answer": "библиотека"
+    }, {
+      "id": 6,
+      "ask": "can",
+      "translate": "мочь, уметь",
+      "answer": "could"
+    }, {
+      "id": 5,
+      "ask": "potato",
+      "answer": "картофель"
+    },
+    {
+      "id":  4,
+      "ask": "rat",
+      "answer": "крыса"
+    }, {
+      "id":  3,
+      "ask": "square",
+      "answer": "квадрат"
+    }, {
+      "id": 2,
+      "ask": "tail",
+      "answer": "хвост"
+    }, {
+      "id": 1,
+      "ask": "wheel",
+      "answer": "колесо"
+    }
+  ]
 }

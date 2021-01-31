@@ -1,0 +1,21 @@
+.container{
+  width: 80%;
+  margin: 55px auto 30px;
+}
+.itemVerb{
+  width: 230px;
+  margin: 20px 10px;
+  background: #5f7392;
+  border-radius: 3px;
+  padding: 10px 5px;
+  height: 124px;
+}
+.wrapVerbs,.wrapWords{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.errorWr{
+  background: deeppink;
+}

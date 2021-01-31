@@ -1,29 +1,44 @@
 import {Dispatch} from "redux";
 
-type askVerbalType = {
+type getVerbsACType = ReturnType<typeof getVerbsAC>
+type getNounsACType = ReturnType<typeof getNounsAC>
+type actionType = getVerbsACType | getNounsACType
+export type objV={
+    id:number,
+    ask:string,
+    answer:string,
+    translate:string
+}
+export type objN={
+    id:number,
+    ask:string,
+    answer:string,
+}
+export type askVerbsType = {
     status:boolean
 } & objV
-// let askVerbal:askVerbalType = {
-//     id:null,
-//     ask:'',
-//     answer:'',
-//     translate:'',
-//     status:false
-// }
-type getVerbalACType = ReturnType<typeof getVerbalAC>
-type actionType = getVerbalACType
+export type askNounsType = {
+    status:boolean
+} & objN
+
 type initStateType={
-    askVerbals: Array<askVerbalType>
+    askVerbs: Array<askVerbsType>
+    askNouns: Array<askNounsType>
 }
 let initState: initStateType = {
-    askVerbals: [],
+    askVerbs: [],
+    askNouns: [],
 }
 
 export const levelReducer = (state = initState, action: actionType): initStateType => {
     switch (action.type) {
-        case 'GET-VERBAL':
+        case 'GET-VERBS':
             return {...state,
-                askVerbals: action.payload.map(i => ({...i, status:false}) )
+                askVerbs: action.payload.map(i => ({...i, status:false}) )
+            }
+        case 'GET-NOUNS':
+            return {...state,
+                askNouns: action.payload.map(i => ({...i, status:false}) )
             }
         // case 'SOME-CASE':
         //     return {...state}
@@ -31,11 +46,6 @@ export const levelReducer = (state = initState, action: actionType): initStateTy
             return {...state}
     }
 }
-type objV={
-    id:number,
-    ask:string,
-    answer?:string,
-    translate:string
-    stopped?: string
-}
-export const getVerbalAC=(payload:Array<objV>)=>({type:'GET-VERBAL',payload} as const)
+
+export const getVerbsAC=(payload:Array<objV>)=>({type:'GET-VERBS',payload} as const)
+export const getNounsAC=(payload:Array<objN>)=>({type:'GET-NOUNS',payload} as const)

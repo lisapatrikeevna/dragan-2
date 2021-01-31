@@ -1,20 +1,16 @@
-import React, {useEffect} from 'react';
-import {useDispatch} from "react-redux";
-import verbs from './verbs.json'
-import {getVerbalAC} from "../../../1bll/levelReducer";
+import React from 'react'
+import cl from './TestLevel.module.scss'
+import Verbs from "./Verbs";
+import Noun from "./Noun";
 
 const TestLevel = () => {
-    const dispatch = useDispatch()
-    useEffect(()=>{
 
-        let payload: any = verbs.verbs
-
-        dispatch(getVerbalAC(payload))
-    },[])
     return (
-        <div>
+        <div className={cl.container}>
             <h4>Топ 50 часто употребляемых английских глаголов с переводом</h4>
-
+            <Verbs/>
+            <h4>50 популярных существительных</h4>
+            <Noun/>
         </div>
     );
 };
