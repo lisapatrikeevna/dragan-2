@@ -20,7 +20,7 @@ function App() {
         }, []
     )
 
-    let userStatus = useSelector<AppRootStateType,boolean>(state => state.login.status)
+        let userStatus = useSelector<AppRootStateType,boolean>(state => state.login.status)
 
 
     return (
@@ -30,10 +30,10 @@ function App() {
             {/*<Route path={"/registration"} render={() => <Registration/>}/>*/}
             {/*{!userStatus && <MainPage/>}*/}
             <Route path={'/'} exact render={() => <Redirect to='/MainPage'/>}/>
-            <Route path={'/mainPage'} exact render={() => <MainPage/>}/>
-            <Route path={'/userPage'} exact render={() => <UserPage/>}/>
-            <Route path={'/testLevel'} exact render={() => <TestLevel/>}/>
-            <Route path={'/individualPage'} exact render={() => <IndividualPage/>}/>
+            <Route path={'/mainPage'} render={() => <MainPage/>}/>
+            <Route path={'/userPage'} render={() => <UserPage/>}/>
+            <Route path={'/testLevel'} render={() => <TestLevel/>}/>
+            <Route path={'/individualPage'} render={() => <IndividualPage/>}/>
             <Footer/>
         </div>
     );

@@ -2,7 +2,9 @@ import {Dispatch} from "redux";
 
 type getVerbsACType = ReturnType<typeof getVerbsAC>
 type getNounsACType = ReturnType<typeof getNounsAC>
-type actionType = getVerbsACType | getNounsACType
+type setStatusVerbACType = ReturnType<typeof setStatusVerbAC>
+type setStatusNounACType = ReturnType<typeof setStatusNounAC>
+type actionType = getVerbsACType | getNounsACType | setStatusVerbACType | setStatusNounACType
 export type objV={
     id:number,
     ask:string,
@@ -31,6 +33,7 @@ let initState: initStateType = {
 }
 
 export const levelReducer = (state = initState, action: actionType): initStateType => {
+   debugger
     switch (action.type) {
         case 'GET-VERBS':
             return {...state,
@@ -40,12 +43,22 @@ export const levelReducer = (state = initState, action: actionType): initStateTy
             return {...state,
                 askNouns: action.payload.map(i => ({...i, status:false}) )
             }
-        // case 'SOME-CASE':
-        //     return {...state}
+        case 'SET-STATUS-VERB':
+            debugger
+            //let ggg = state.askVerbs.map(i=>i.id===action.payload? {...i,status:true} : i)
+            return {...state,
+                askVerbs: state.askVerbs.map(i=>i.id===action.payload? {...i,status:true} : i)
+            }
+        case 'SET-STATUS-NOUN':
+            return {...state,
+                askVerbs: state.askVerbs.map(i=>i.id===action.payload? {...i,status:true} : i)
+            }
         default:
             return {...state}
     }
 }
 
 export const getVerbsAC=(payload:Array<objV>)=>({type:'GET-VERBS',payload} as const)
+export const setStatusVerbAC=(payload:number)=>({type:'SET-STATUS-VERB',payload} as const)
+export const setStatusNounAC=(payload:number)=>({type:'SET-STATUS-NOUN',payload} as const)
 export const getNounsAC=(payload:Array<objN>)=>({type:'GET-NOUNS',payload} as const)

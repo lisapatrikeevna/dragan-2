@@ -1,7 +1,7 @@
 import React from 'react'
 import cl from './TestLevel.module.scss'
-import Verbs from "./Verbs";
-import Noun from "./Noun";
+import Verbs from "./verbs"
+import Noun from "./noun";
 
 const TestLevel = () => {
 
