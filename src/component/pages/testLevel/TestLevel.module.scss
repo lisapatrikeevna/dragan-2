@@ -19,3 +19,17 @@
 .errorWr{
   background: deeppink;
 }
+.status{
+  opacity: 0.7;
+}
+.block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  height: 90px;
+  width: 100%;
+}
+.blockBtn{
+  margin: 12px auto;
+}

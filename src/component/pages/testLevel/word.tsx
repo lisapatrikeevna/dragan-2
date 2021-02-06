@@ -2,6 +2,7 @@ import React, {ChangeEvent, useEffect, useState} from 'react'
 import cl from './TestLevel.module.scss'
 import {setStatusVerbAC} from "../../../1bll/levelReducer";
 import {useDispatch} from "react-redux";
+import {Button, Input} from "semantic-ui-react";
 
 type propsType = {
     id: number
@@ -9,18 +10,27 @@ type propsType = {
     placeholder?: string
     translate?: string
     status: boolean
+    right:boolean
     answer: string
-    changeStatus:(id:number)=>void
+    changeStatus:(id:number,right:boolean)=>void
 }
 const Word = (props: propsType) => {
-    const dispatch = useDispatch()
     let [tryAnswer, setTryAnswer] = useState('')
     let [error, setError] = useState('')
 
+    const chaneStatus = () =>{
         if (error !== '') {
-            console.log("if(error.text!=='')");
-           props.changeStatus(props.id)
+            props.changeStatus(props.id, true)
+            setTimeout(()=>{
+               // setError('')
+                setTryAnswer('')
+            },7000)
+        }else{
+            props.changeStatus(props.id, false)
+           // setError('')
+            setTryAnswer('')
         }
+    }
 
     const onChangeText = (e: ChangeEvent<HTMLInputElement>) => {
         if ((e.currentTarget.value).trim()) {
@@ -29,22 +39,33 @@ const Word = (props: propsType) => {
     }
     const onTest = () => {
         if (tryAnswer.trim() !== '') {
-            props.answer === tryAnswer ?
+            if(props.answer === tryAnswer) {
                 setTryAnswer('')
-                : setError(props.answer)
+                chaneStatus()
+            } else{
+                setError(props.answer)
+                chaneStatus()
+            }
         } else {
             alert('enter you answer')
         }
     }
-    const throwError = props.status && error !== ''
+    const throwError = props.right || error !== ''
+    const disable= props.status &&  true
     return (
-        <div key={props.id} className={`${cl.itemVerb}  ${throwError ? cl.errorWr : ''}`}>
+        <div key={props.id} className={`${cl.itemVerb}  ${throwError ? cl.errorWr : ''} ${props.status && cl.status}`} >
             <p>ask: {props.ask}</p>
-            <p>translated: {props.translate}</p>
-            <p>status: {(props.status).toString()}</p>
-            <input type="text" value={tryAnswer} onChange={onChangeText} placeholder={props.placeholder}/>
-            <button onClick={onTest}>check</button>
-            <p>{error && <p>answer: {error}</p>}</p>
+            {props.translate && <p>translated: {props.translate}</p>}
+            {/*<p>status: {(props.status).toString()}</p>*/}
+
+            <Input type="text" value={tryAnswer} onChange={onChangeText} placeholder={props.placeholder} disabled={disable}/>
+            {/*<button onClick={onTest}>check</button>*/}
+            <div className={cl.blockBtn}>
+            <Button color='red' content='check' icon='eject' onClick={onTest}
+                   //label={{  color: 'red', pointing: 'left', content:`answer: ${error}` }}/>
+                    label={{  color: 'red', pointing: 'left', content:`answer: ${error}` }}/>
+            {/*<p>{error && <p>answer: {error}</p>}</p>*/}
+            </div>
         </div>
     );
 };

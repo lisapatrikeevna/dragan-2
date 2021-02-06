@@ -18,9 +18,11 @@ export type objN={
 }
 export type askVerbsType = {
     status:boolean
+    right:boolean
 } & objV
 export type askNounsType = {
     status:boolean
+    right:boolean
 } & objN
 
 type initStateType={
@@ -33,25 +35,23 @@ let initState: initStateType = {
 }
 
 export const levelReducer = (state = initState, action: actionType): initStateType => {
-   debugger
+   // debugger
     switch (action.type) {
         case 'GET-VERBS':
             return {...state,
-                askVerbs: action.payload.map(i => ({...i, status:false}) )
+                askVerbs: action.payload.map(i => ({...i, status:false,right:false}) )
             }
         case 'GET-NOUNS':
             return {...state,
-                askNouns: action.payload.map(i => ({...i, status:false}) )
+                askNouns: action.payload.map(i => ({...i, status:false, right:false}) )
             }
         case 'SET-STATUS-VERB':
-            debugger
-            //let ggg = state.askVerbs.map(i=>i.id===action.payload? {...i,status:true} : i)
             return {...state,
-                askVerbs: state.askVerbs.map(i=>i.id===action.payload? {...i,status:true} : i)
+                askVerbs: state.askVerbs.map(i=>i.id===action.payload.id? {...i,status:true, right:action.payload.right} : i)
             }
         case 'SET-STATUS-NOUN':
             return {...state,
-                askVerbs: state.askVerbs.map(i=>i.id===action.payload? {...i,status:true} : i)
+                askVerbs: state.askVerbs.map(i=>i.id===action.payload.id? {...i,status:true, right:action.payload.right} : i)
             }
         default:
             return {...state}
@@ -59,6 +59,6 @@ export const levelReducer = (state = initState, action: actionType): initStateTy
 }
 
 export const getVerbsAC=(payload:Array<objV>)=>({type:'GET-VERBS',payload} as const)
-export const setStatusVerbAC=(payload:number)=>({type:'SET-STATUS-VERB',payload} as const)
-export const setStatusNounAC=(payload:number)=>({type:'SET-STATUS-NOUN',payload} as const)
+export const setStatusVerbAC=(payload: {id: number,right:boolean })=>({type:'SET-STATUS-VERB',payload} as const)
+export const setStatusNounAC=(payload:{id: number,right:boolean })=>({type:'SET-STATUS-NOUN',payload} as const)
 export const getNounsAC=(payload:Array<objN>)=>({type:'GET-NOUNS',payload} as const)

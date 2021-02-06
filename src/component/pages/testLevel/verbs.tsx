@@ -13,17 +13,13 @@ const Verbs = () => {
         dispatch(getVerbsAC(payload))
     }, [dispatch])
     let verbsAll = useSelector<AppRootStateType, askVerbsType[]>(state => state.setLevel.askVerbs)
-    // useEffect(() => {
-    // if (error.text !== '') {
-    //     console.log("if(error.text!=='')");
-    //     dispatch(setStatusVerbAC(error.id))
-    // }
-    // }, [dispatch])
-    const verb = verbsAll.map(v => <Word id={v.id} ask={v.ask} status={v.status} answer={v.answer}
-                                         placeholder='write the wrong form' changeStatus={changeStatus}/>)
-    const changeStatus = (id:number) => {
-        dispatch(setStatusVerbAC(id))
-    }
+        const changeStatus = (id:number,right:boolean) => {
+        debugger
+            dispatch(setStatusVerbAC({id, right}))
+        }
+    const verb = verbsAll.map(v => <Word key={v.id} id={v.id} ask={v.ask} status={v.status} answer={v.answer} translate={v.translate}
+                                         placeholder='write the wrong form' changeStatus={changeStatus} right={v.right}/>)
+
     return (
         <div className={cl.wrapVerbs}>
             {verb}

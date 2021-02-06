@@ -11,6 +11,7 @@ import {Registration} from "../Registration/registration";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../1bll/store";
 import {isAuthTC} from "../../1bll/loginReduser";
+import {PATH} from "../../App";
 
 // TODO: Update <Search> usage after its will be implemented
 type propsType = {
@@ -48,15 +49,15 @@ const MenuExampleAttached = (props: propsType) => {
                         <Icon name='dropdown'/>
                         <span className='text'>if login true</span>
                         <Dropdown.Menu>
-                            <Dropdown.Item><NavLink to={'/individualPage'}>IndividualPage</NavLink></Dropdown.Item>
-                            <Dropdown.Item><NavLink to={'/userPage'}>UserPage</NavLink></Dropdown.Item>
+                            <Dropdown.Item><NavLink to={PATH.COLLECTIVE}>collectivePage</NavLink></Dropdown.Item>
+                            <Dropdown.Item><NavLink to={PATH.PROFILE}>UserPage</NavLink></Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown.Item>
                     }
 
-                    <Dropdown.Item><NavLink  to='/testLevel'>test level</NavLink></Dropdown.Item>
+                    <Dropdown.Item><NavLink  to={PATH.TEST}>test level</NavLink></Dropdown.Item>
                     <Dropdown.Item><Link to='footer'>contacts</Link></Dropdown.Item>
-                    <Dropdown.Item><NavLink to='/mainPage'>home</NavLink></Dropdown.Item>
+                    <Dropdown.Item><NavLink to={PATH.HOME}>home</NavLink></Dropdown.Item>
                     {/*<Dropdown.Item><Link to='collective'>collective</Link></Dropdown.Item>*/}
                     <Dropdown.Divider/>
                     {/*<Dropdown.Header>Export</Dropdown.Header>*/}
@@ -81,7 +82,7 @@ const MenuExampleAttached = (props: propsType) => {
                     <span>registration</span>
                     <Icon name='arrow alternate circle up outline' id='4' onClick={regOnClick}/>
                 </button>
-                : <button onClick={logOnClick}>
+                : <button onClick={logOnClick} className='default' >
                     <span>login</span>
                     <Icon name='arrow alternate circle up outline' id='3' onClick={logOnClick}/>
                 </button>

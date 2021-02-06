@@ -3,11 +3,13 @@ import {appReducer} from "./appReduser";
 import {loginReducer} from "./loginReduser";
 import thunkMiddleware from "redux-thunk";
 import {levelReducer} from "./levelReducer";
+import {tasksReducer} from "./tasksReduser";
 
 const rootReducer = combineReducers({
     app: appReducer,
     login: loginReducer,
     setLevel: levelReducer,
+    someTasks: tasksReducer,
 });
 
 export const store = createStore(rootReducer,applyMiddleware(thunkMiddleware));

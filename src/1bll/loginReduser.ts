@@ -52,11 +52,9 @@ export const loginTC=(email:string,password:string)=>(dispatch:Dispatch)=>{
         .then((res) => {
             // dispatch(setStatusAC(true))
             console.log(res);
-            console.log('ok');
         })
         .catch(er => {
-            alert(er)
-            console.log('error');
+            console.log(er);
         })
 }
 export const registrationTC=(email:string,password:string)=>(dispatch:Dispatch)=>{

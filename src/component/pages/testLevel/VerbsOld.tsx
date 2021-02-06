@@ -14,12 +14,12 @@ const VerbsOld = () => {
     let verbsAll = useSelector<AppRootStateType, askVerbsType[]>(state => state.setLevel.askVerbs)
     let [tryAnswer, setTryAnswer] = useState({id: 0, text: ''})
     let [error, setError] = useState({id: 0, text: ''})
-    useEffect(() => {
-    if (error.text !== '') {
-        console.log("if(error.text!=='')");
-        dispatch(setStatusVerbAC(error.id))
-    }
-    }, [dispatch])
+    // useEffect(() => {
+    // if (error.text !== '') {
+    //     console.log("if(error.text!=='')");
+    //     dispatch(setStatusVerbAC(error.id))
+    // }
+    // }, [dispatch])
     const verb = verbsAll.map(v => {
             const onChangeText = (e: ChangeEvent<HTMLInputElement>) => {
                 if ((e.currentTarget.value).trim()) {
