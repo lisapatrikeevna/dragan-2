@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dragan-2/static/css/main.e45f052a.chunk.css",
-    "main.js": "/dragan-2/static/js/main.896b4f1c.chunk.js",
-    "main.js.map": "/dragan-2/static/js/main.896b4f1c.chunk.js.map",
-    "runtime-main.js": "/dragan-2/static/js/runtime-main.d1bfef06.js",
-    "runtime-main.js.map": "/dragan-2/static/js/runtime-main.d1bfef06.js.map",
+    "main.css": "/dragan-2/static/css/main.332cb769.chunk.css",
+    "main.js": "/dragan-2/static/js/main.6dc9f779.chunk.js",
+    "main.js.map": "/dragan-2/static/js/main.6dc9f779.chunk.js.map",
+    "runtime-main.js": "/dragan-2/static/js/runtime-main.b78ead45.js",
+    "runtime-main.js.map": "/dragan-2/static/js/runtime-main.b78ead45.js.map",
     "static/css/2.737bf2d2.chunk.css": "/dragan-2/static/css/2.737bf2d2.chunk.css",
-    "static/js/2.c401e801.chunk.js": "/dragan-2/static/js/2.c401e801.chunk.js",
-    "static/js/2.c401e801.chunk.js.map": "/dragan-2/static/js/2.c401e801.chunk.js.map",
-    "static/js/3.94589f0b.chunk.js": "/dragan-2/static/js/3.94589f0b.chunk.js",
-    "static/js/3.94589f0b.chunk.js.map": "/dragan-2/static/js/3.94589f0b.chunk.js.map",
+    "static/js/2.d0e714bc.chunk.js": "/dragan-2/static/js/2.d0e714bc.chunk.js",
+    "static/js/2.d0e714bc.chunk.js.map": "/dragan-2/static/js/2.d0e714bc.chunk.js.map",
+    "static/js/3.aa40a7e8.chunk.js": "/dragan-2/static/js/3.aa40a7e8.chunk.js",
+    "static/js/3.aa40a7e8.chunk.js.map": "/dragan-2/static/js/3.aa40a7e8.chunk.js.map",
     "index.html": "/dragan-2/index.html",
     "static/css/2.737bf2d2.chunk.css.map": "/dragan-2/static/css/2.737bf2d2.chunk.css.map",
-    "static/css/main.e45f052a.chunk.css.map": "/dragan-2/static/css/main.e45f052a.chunk.css.map",
-    "static/js/2.c401e801.chunk.js.LICENSE.txt": "/dragan-2/static/js/2.c401e801.chunk.js.LICENSE.txt",
+    "static/css/main.332cb769.chunk.css.map": "/dragan-2/static/css/main.332cb769.chunk.css.map",
+    "static/js/2.d0e714bc.chunk.js.LICENSE.txt": "/dragan-2/static/js/2.d0e714bc.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/dragan-2/static/media/outline-icons.ddae9b1b.woff",
     "static/media/f1.be68cb2b.png": "/dragan-2/static/media/f1.be68cb2b.png",
     "static/media/f2.8edfa148.png": "/dragan-2/static/media/f2.8edfa148.png",
@@ -26,10 +26,10 @@
     "static/media/time.79a00c01.png": "/dragan-2/static/media/time.79a00c01.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d1bfef06.js",
+    "static/js/runtime-main.b78ead45.js",
     "static/css/2.737bf2d2.chunk.css",
-    "static/js/2.c401e801.chunk.js",
-    "static/css/main.e45f052a.chunk.css",
-    "static/js/main.896b4f1c.chunk.js"
+    "static/js/2.d0e714bc.chunk.js",
+    "static/css/main.332cb769.chunk.css",
+    "static/js/main.6dc9f779.chunk.js"
   ]
 }
